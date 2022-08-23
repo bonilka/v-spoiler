@@ -2,16 +2,17 @@
   <DemoPage />
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue';
 import DemoPage from './components/DemoPage.vue'
 import './styles/global.css'
 
-export default {
+export default defineComponent({
   name: 'App',
   components: {
     DemoPage
   }
-}
+});
 </script>
 
 <style>

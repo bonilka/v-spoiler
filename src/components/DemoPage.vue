@@ -32,16 +32,30 @@
         <h2 id="events">Events</h2>
         <h2 id="examples">Examples</h2>
         <h3>Spoiler action by button</h3>
-        <button class="button"> Toggle </button>
-        <spoiler>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime sapiente natus, iusto culpa aspernatur sed ea modi voluptatibus doloribus. Quaerat recusandae quia fuga hic quasi impedit, accusamus tempore, possimus porro, eligendi soluta delectus temporibus ab sed ad aperiam quam voluptates molestiae quo magni odio eum odit? Excepturi asperiores ullam sequi!
+        <button
+            class="button"
+            @click="button_model = !button_model"
+            >
+            Toggle
+        </button>
+        <spoiler v-model="button_model">
+            <div class="content-box">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Maxime sapiente natus, iusto culpa aspernatur sed ea modi voluptatibus doloribus.
+                Quaerat recusandae quia fuga hic quasi impedit, accusamus tempore, possimus porro,
+                eligendi soluta delectus temporibus ab sed ad aperiam quam voluptates molestiae quo magni odio eum odit?
+                Excepturi asperiores ullam sequi!
+            </div>
         </spoiler>
     </div>
 </template>
 
-<script>
-import {  Spoiler } from "./Spoiler.vue";
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+import Spoiler from "./Spoiler.vue";
+
+export default defineComponent({
+
     name: "HelloWorld",
     components: {
       Spoiler
@@ -49,7 +63,12 @@ export default {
     props: {
         msg: String,
     },
-};
+    data() {
+        return {
+            button_model: false
+        }
+    }
+});
 </script>
 
 <style scoped>

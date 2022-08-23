@@ -3,8 +3,8 @@
     overflow: hidden;
     transition: height var(--spoiler-time, --transition-fast) ease-in-out;
 
-    &--open-completed {
-        overflow: initial;
-    }
 
+}
+.c-spoiler--open-completed {
+    overflow: initial;
 }

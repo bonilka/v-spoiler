@@ -10,10 +10,10 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import './Spoiler.scss';
+import './Spoiler.css';
 
 export default defineComponent({
-  name: 'CSpoiler',
+  name: 'VSpoiler',
   props: {
     modelValue: {
       type: Boolean,
