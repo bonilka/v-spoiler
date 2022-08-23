@@ -1,0 +1,39 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-theme: #42b983;
+    --color-theme-hover: #38d38d;
+    --color-text-inverse: #fff;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.button {
+    border: none;
+    background-color: var(--color-theme);
+    color: var(--color-text-inverse);
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 4px;
+    padding: 6px 16px;
+    cursor: pointer;
+    transition: background 0.15s;
+
+}
+
+.button:hover {
+    background-color: var(--color-theme-hover);
+}
