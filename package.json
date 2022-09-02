@@ -1,14 +1,18 @@
 {
   "name": "vue-spoiler",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --dest demo",
+    "build:lib": "vue-cli-service build --target lib --name v-spoiler src/components/Spoiler.vue",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "vue": "^3.0.0"
+  },
+  "peerDependencies": {
     "vue": "^3.0.0"
   },
   "devDependencies": {
