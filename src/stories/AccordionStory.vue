@@ -1,28 +1,28 @@
 <template>
-<div class="story stroy--button">
+  <div class="story stroy--button">
     <div class="accordion">
-        <div
+      <div
         v-for="item in list"
         :key="item.id"
         class="accordion-item"
         @click="onClick(item)"
-        >
-            <div class="accordion-item__title">
-                <span :class="['accordion-item__arrow', {'accordion-item__arrow--opened': item.opened}]" />
-                {{item.title}}
-            </div>
-        <spoiler v-model="item.opened">
-            <div class="content-box">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maxime sapiente natus, iusto culpa aspernatur sed ea modi voluptatibus doloribus.
-                Quaerat recusandae quia fuga hic quasi impedit, accusamus tempore, possimus porro,
-                eligendi soluta delectus temporibus ab sed ad aperiam quam voluptates molestiae quo magni odio eum odit?
-                Excepturi asperiores ullam sequi!
-            </div>
-        </spoiler>
+      >
+        <div class="accordion-item__title">
+          <span :class="['accordion-item__arrow', {'accordion-item__arrow--opened': item.opened}]" />
+          {{ item.title }}
         </div>
+        <spoiler v-model="item.opened">
+          <div class="content-box">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Maxime sapiente natus, iusto culpa aspernatur sed ea modi voluptatibus doloribus.
+            Quaerat recusandae quia fuga hic quasi impedit, accusamus tempore, possimus porro,
+            eligendi soluta delectus temporibus ab sed ad aperiam quam voluptates molestiae quo magni odio eum odit?
+            Excepturi asperiores ullam sequi!
+          </div>
+        </spoiler>
+      </div>
     </div>
-</div>
+  </div>
 </template>
 
 <script lang="ts">

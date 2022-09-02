@@ -12,11 +12,6 @@ export default defineComponent({
   components: {
     DemoPage
   },
-  data() {
-    return {
-      isInverse: false
-    }
-  },
   provide() {
     return {
       setTheme: (isInverse: boolean) => {
@@ -25,6 +20,11 @@ export default defineComponent({
       },
       isThemeInverse: computed(() => this.isInverse)
     };
+  },
+  data() {
+    return {
+      isInverse: false
+    }
   }
 });
 </script>

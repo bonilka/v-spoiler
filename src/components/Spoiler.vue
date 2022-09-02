@@ -3,7 +3,7 @@
     :class="classlist"
     :style="{ height: height, '--spoiler-time': `${time}ms` }"
     @transitionend="onTransitionEnd"
-    >
+  >
     <slot />
   </div>
 </template>
