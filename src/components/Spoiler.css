@@ -1,10 +1,10 @@
-.c-spoiler {
+.v-spoiler {
     position: relative;
-    overflow: hidden;
+    overflow-y: hidden;
     transition: height var(--spoiler-time, --transition-fast) ease-in-out;
 
 
 }
-.c-spoiler--open-completed {
+.v-spoiler--open-completed {
     overflow: initial;
 }

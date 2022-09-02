@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="class_list"
+    :class="classlist"
     :style="{ height: height, '--spoiler-time': `${time}ms` }"
     @transitionend="onTransitionEnd"
     >
@@ -31,24 +31,24 @@ export default defineComponent({
   data() {
     return {
       height: this.modelValue ? '' : 0,
-      is_progress: false,
+      isProgress: false,
     };
   },
   computed: {
-    class_list(): {[key: string]: boolean} {
+    classlist(): {[key: string]: boolean} {
       return {
-        'c-spoiler': true,
-        'c-spoiler--opened': this.modelValue,
-        'c-spoiler--closed': !this.modelValue,
-        'c-spoiler--open-completed': this.modelValue && !this.is_progress,
-        'c-spoiler--close-completed': !this.modelValue && !this.is_progress,
+        'v-spoiler': true,
+        'v-spoiler--opened': this.modelValue,
+        'v-spoiler--closed': !this.modelValue,
+        'v-spoiler--open-completed': this.modelValue && !this.isProgress,
+        'v-spoiler--close-completed': !this.modelValue && !this.isProgress,
       };
     },
   },
   watch: {
     modelValue(val: boolean) {
       this.height = `${this.$el.scrollHeight}px`;
-      this.is_progress = true;
+      this.isProgress = true;
 
       if (!val) {
         window.requestAnimationFrame(() => {
@@ -62,7 +62,7 @@ export default defineComponent({
       if (this.modelValue) {
         this.height = '';
       }
-      this.is_progress = false;
+      this.isProgress = false;
       this.$emit(this.modelValue ? 'open-completed' : 'close-completed');
     },
   },
