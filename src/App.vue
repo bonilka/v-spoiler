@@ -4,7 +4,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import DemoPage from './components/DemoPage.vue'
+import DemoPage from './pages/DemoPage.vue'
 import './styles/global.css'
 
 export default defineComponent({

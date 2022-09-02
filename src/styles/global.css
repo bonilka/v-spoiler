@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-size: 18px;
+    line-height: 1.75;
 }
 
 *,
@@ -15,6 +16,7 @@ body {
     --color-theme: #42b983;
     --color-theme-hover: #38d38d;
     --color-text-inverse: #fff;
+    --color-border: #b1b1b1;
 }
 
 .text-center {
@@ -36,4 +38,12 @@ body {
 
 .button:hover {
     background-color: var(--color-theme-hover);
+}
+
+.content-box {
+    margin-top: 20px;
+    padding: 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+
 }
