@@ -28,7 +28,7 @@
     <nav class="nav">
       <ul>
         <li>
-          <a href="#start">Get started</a>
+          <a href="#start">Quick start</a>
         </li>
         <li>
           <a href="#props">Props</a>
@@ -41,6 +41,57 @@
         </li>
       </ul>
     </nav>
+    <h2 id="start">
+      Quick start
+    </h2>
+
+    <h3>Install</h3>
+
+    <pre>
+npm install v-spoiler
+</pre>
+
+    <h3>Include</h3>
+
+    <ol>
+      <li>
+        Global include
+        <pre>
+// App.vue
+
+import VSpoiler from 'v-spoiler';
+import 'v-spoiler/dist/v-spoiler.css';
+
+export default {
+  components: {
+    VSpoiler
+  }
+}
+</pre>
+      </li>
+      <li>
+        Local include
+        <pre>
+// main.js
+
+import VSpoiler from 'v-spoiler';
+import 'v-spoiler/dist/v-spoiler.css';
+app.component('VSpoiler', VSpoiler);
+</pre>
+      </li>
+    </ol>
+
+
+    <h3>Usage</h3>
+
+    <pre>
+{{`<v-spoiler v-model="value">
+  <div>
+    Long content here...
+  </div>
+</v-spoiler>`}}
+</pre>
+
     <h2 id="props">
       Props
     </h2>

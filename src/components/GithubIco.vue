@@ -1,6 +1,6 @@
 <template>
   <a
-    href="github-corner"
+    href="https://github.com/bonilka/v-spoiler"
     class="github-corner"
     @mouseenter="onMouseEnter"
     @mouseleave="onMouseLeave"
